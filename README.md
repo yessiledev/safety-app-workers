@@ -9,3 +9,4 @@ Application mobile destinée à informer les travailleurs (intérimaires, jeunes
 
 ## Objectif
 Réduire les accidents du travail en donnant une information simple, rapide et accessible dès le début de la journée.
+
