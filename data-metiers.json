@@ -1,0 +1,20 @@
+{
+  "manutentionnaire": {
+    "risques": [
+      "Troubles musculo-squelettiques",
+      "Chutes de plain-pied",
+      "Écrasement",
+      "Fatigue physique"
+    ],
+    "epi": [
+      "Chaussures de sécurité",
+      "Gants anti-coupure",
+      "Ceinture lombaire (si nécessaire)"
+    ],
+    "gestes_interdits": [
+      "Soulever seul une charge trop lourde",
+      "Courir en zone de stockage",
+      "Passer sous une charge suspendue"
+    ]
+  }
+}
