@@ -25,3 +25,6 @@ app.get('/risques/:metier', (req, res) => {
 app.listen(port, () => {
   console.log(`Serveur lancé sur http://localhost:${port}`);
 });
+app.get('/metiers', (req, res) => {
+  res.json(Object.keys(metiersData));
+});
