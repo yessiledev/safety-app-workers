@@ -31,9 +31,25 @@ export default function HomeScreen() {
         <Text key={index} style={styles.item}>• {e}</Text>
       ))}
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Faire la check‑list sécurité</Text>
-      </TouchableOpacity>
+     <TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("FicheMetier", { metier: "manutentionnaire" })}
+>
+  <Text style={styles.buttonText}>Voir la fiche métier</Text>
+</TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("ListeMetiers")}
+>
+  <Text style={styles.buttonText}>Choisir un autre métier</Text>
+</TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("DroitRetrait")}
+>
+  <Text style={styles.buttonText}>Droit de retrait</Text>
+</TouchableOpacity>
+
     </ScrollView>
   );
 }
@@ -75,11 +91,33 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "600"
-  } <TouchableOpacity 
+ },
+ <TouchableOpacity 
   style={styles.button}
   onPress={() => navigation.navigate("Checklist")}
 >
   <Text style={styles.buttonText}>Faire la check‑list sécurité</Text>
 </TouchableOpacity>
 
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("FicheMetier", { metier: "manutentionnaire" })}
+>
+  <Text style={styles.buttonText}>Voir la fiche métier</Text>
+</TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("SignalerDanger")}
+>
+  <Text style={styles.buttonText}>Signaler un danger</Text>
+</TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("HistoriqueDangers")}
+>
+  <Text style={styles.buttonText}>Historique des signalements</Text>
+</TouchableOpacity>
+
+
 });
+
