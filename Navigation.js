@@ -14,6 +14,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
   component={DashboardScreen} 
   options={{ title: "Tableau de bord" }}
 />
+import ModeJeuneRecrueIntro from '../screens/ModeJeuneRecrueIntro';
+import ModeJeuneRecrueEtape1 from '../screens/ModeJeuneRecrueEtape1';
+
+<Stack.Screen name="ModeJeuneRecrueIntro" component={ModeJeuneRecrueIntro} options={{ title: "Mode Jeune Recrue" }} />
+<Stack.Screen name="ModeJeuneRecrueEtape1" component={ModeJeuneRecrueEtape1} options={{ title: "Étape 1" }} />
+/>
 import FormationScreen from '../screens/FormationScreen';
 
 <Stack.Screen 
