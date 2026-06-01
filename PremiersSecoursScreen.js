@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function PremiersSecoursScreen() {
   const navigation = useNavigation();
@@ -80,7 +81,14 @@ export default function PremiersSecoursScreen() {
       >
         <Text style={styles.buttonSecondaryText}>Signaler un danger</Text>
       </TouchableOpacity>
-
+ <TouchableOpacity 
+        style={styles.buttonSecondary}
+        onPress={() => navigation.navigate("<EmergencyButton />
+")}
+      >
+        <Text style={styles.buttonSecondaryText}><EmergencyButton />
+</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
