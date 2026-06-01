@@ -58,6 +58,13 @@ import SignalerDangerScreen from '../screens/SignalerDangerScreen';
 import HistoriqueDangersScreen from '../screens/HistoriqueDangersScreen';
 import DashboardScreen from '../screens/DashboardScreen';
 import ProceduresScreen from '../screens/ProceduresScreen';
+import DroitRetraitScreen from '../screens/DroitRetraitScreen';
+
+<Stack.Screen 
+  name="DroitRetrait" 
+  component={DroitRetraitScreen} 
+  options={{ title: "Droit de retrait" }}
+/>
 
 <Stack.Screen 
   name="Procedures" 
