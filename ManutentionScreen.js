@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function ManutentionScreen() {
   const navigation = useNavigation();
@@ -71,7 +72,16 @@ export default function ManutentionScreen() {
       >
         <Text style={styles.buttonText}>Poser une question à l’IA</Text>
       </TouchableOpacity>
-
+          
+<TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate("<EmergencyButton/>
+")}
+      >
+        <Text style={styles.buttonText}><EmergencyButton />
+</Text>
+      </TouchableOpacity>
+                                           
       <TouchableOpacity 
         style={styles.buttonSecondary}
         onPress={() => navigation.navigate("SignalerDanger")}
