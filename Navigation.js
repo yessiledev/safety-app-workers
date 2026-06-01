@@ -59,6 +59,8 @@ import HistoriqueDangersScreen from '../screens/HistoriqueDangersScreen';
 import DashboardScreen from '../screens/DashboardScreen';
 import ProceduresScreen from '../screens/ProceduresScreen';
 import DroitRetraitScreen from '../screens/DroitRetraitScreen';
+import { useNavigation } from '@react-navigation/native';
+const navigation = useNavigation();
 
 <Stack.Screen 
   name="DroitRetrait" 
