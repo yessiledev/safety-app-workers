@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function EpiScreen() {
   const navigation = useNavigation();
@@ -64,6 +65,7 @@ export default function EpiScreen() {
       >
         <Text style={styles.buttonText}>Poser une question à l’IA</Text>
       </TouchableOpacity>
+<EmergencyButton />
 
     </ScrollView>
   );
