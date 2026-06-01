@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function JobScreen({ route }) {
   const { metier } = route.params;
@@ -47,6 +48,8 @@ export default function JobScreen({ route }) {
       {fiche.gestes_interdits.map((g, i) => (
         <Text key={i} style={styles.item}>• {g}</Text>
       ))}
+  <EmergencyButton />
+
     </ScrollView>
   );
 }
