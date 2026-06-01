@@ -8,6 +8,7 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function DashboardScreen() {
   const navigation = useNavigation();
@@ -86,6 +87,7 @@ export default function DashboardScreen() {
       >
         <Text style={styles.buttonText}>Historique des signalements</Text>
       </TouchableOpacity>
+<EmergencyButton />
 
     </ScrollView>
   );
