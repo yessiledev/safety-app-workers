@@ -118,6 +118,12 @@ const styles = StyleSheet.create({
 >
   <Text style={styles.buttonText}>Historique des signalements</Text>
 </TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("DroitRetrait")}
+>
+  <Text style={styles.buttonText}>Droit de retrait</Text>
+</TouchableOpacity>
 
 
 });
