@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, ScrollView } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function ChecklistScreen() {
   const questions = [
@@ -69,6 +70,8 @@ export default function ChecklistScreen() {
       <TouchableOpacity style={styles.validateButton} onPress={handleValidate}>
         <Text style={styles.validateText}>Valider la check‑list</Text>
       </TouchableOpacity>
+        <EmergencyButton />
+
     </ScrollView>
   );
 }
