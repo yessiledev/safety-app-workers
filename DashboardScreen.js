@@ -240,6 +240,13 @@ const styles = StyleSheet.create({
 >
   <Text style={styles.buttonText}>Travail isolé</Text>
 </TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("ModeJeuneRecrueIntro")}
+>
+  <Text style={styles.buttonText}>Mode Jeune Recrue</Text>
+</TouchableOpacity>
+
 
 
 });
