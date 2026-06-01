@@ -49,6 +49,13 @@ import CirculationScreen from '../screens/CirculationScreen';
   component={CirculationScreen} 
   options={{ title: "Circulation interne" }}
 />
+import TravailIsoleScreen from '../screens/TravailIsoleScreen';
+
+<Stack.Screen 
+  name="TravailIsole" 
+  component={TravailIsoleScreen} 
+  options={{ title: "Travail isolé" }}
+/>
 
 
 import HomeScreen from '../screens/HomeScreen';
