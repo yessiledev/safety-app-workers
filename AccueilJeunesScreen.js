@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
@@ -7,11 +8,13 @@ export default function AccueilJeunesScreen() {
 
   return (
     <ScrollView style={styles.container}>
+      
       <Text style={styles.title}>Ta vie avant tout</Text>
-      <Text style={styles.subtitle}>Message pour les jeunes, les nouveaux et les intérimaires</Text>
+      <Text style={styles.subtitle}>Pour les jeunes, les nouveaux, les intérimaires, les apprentis</Text>
 
+      {/* Bloc drames réels */}
       <View style={styles.cardDanger}>
-        <Text style={styles.cardTitle}>Trois jeunes. Trois drames. Trois vies perdues.</Text>
+        <Text style={styles.cardTitle}>Ces accidents n’auraient jamais dû arriver</Text>
         <Text style={styles.cardText}>
           • Un jeune écrasé sous des carcasses de bétail.{"\n"}
           • Un autre brûlé sous du goudron bouillant.{"\n"}
@@ -20,25 +23,30 @@ export default function AccueilJeunesScreen() {
         </Text>
       </View>
 
+      {/* Bloc règle absolue */}
       <Text style={styles.sectionTitle}>Règle absolue</Text>
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Si tu ne comprends pas, tu t’arrêtes.</Text>
         <Text style={styles.cardText}>
-          Si personne ne t’a expliqué clairement quoi faire, comment le faire, où te placer, quels risques tu as ou quels EPI porter, tu ne commences pas.
-          {"\n\n"}Tu sors de la zone, tu consultes l’application, et tu appelles quelqu’un de responsable.
+          Pas d’explication = pas de travail.{"\n"}
+          Pas d’encadrement = pas de travail.{"\n"}
+          Pas de sécurité = pas de travail.{"\n\n"}
+          Tu sors de la zone, tu consultes l’application, tu appelles quelqu’un de responsable.
         </Text>
       </View>
 
+      {/* Bloc instinct */}
       <Text style={styles.sectionTitle}>Écoute ton instinct</Text>
       <View style={styles.card}>
         <Text style={styles.cardTitle}>Si tu ne le sens pas… tu t’écoutes.</Text>
         <Text style={styles.cardText}>
-          Stress, malaise, fatigue, doute, danger, manque d’encadrement…{"\n"}
-          Ton corps te parle. Écoute-le.
-          {"\n\n"}Tu t’arrêtes. Tu sors consulter l’application. Tu demandes à une personne compétente.
+          Malaise, stress, chaleur, fatigue, doute, danger…{"\n"}
+          Ton corps te parle.{"\n\n"}
+          Tu t’arrêtes. Tu sors. Tu demandes de l’aide.
         </Text>
       </View>
 
+      {/* Bouton d'urgence */}
       <TouchableOpacity 
         style={styles.buttonAlert}
         onPress={() => navigation.navigate("AssistantIA")}
@@ -46,17 +54,37 @@ export default function AccueilJeunesScreen() {
         <Text style={styles.buttonAlertText}>Je ne le sens pas — Aide-moi</Text>
       </TouchableOpacity>
 
-      <Text style={styles.sectionTitle}>Tu n’es jamais censé être seul</Text>
+      {/* Bloc ce que ton chef doit faire */}
+      <Text style={styles.sectionTitle}>Ce que ton chef DOIT faire</Text>
       <View style={styles.card}>
         <Text style={styles.cardText}>
-          Si tu es jeune, nouveau, intérimaire, apprenti ou stagiaire, tu dois être accompagné, formé, surveillé, encadré.
-          {"\n\n"}Si ce n’est pas le cas : tu t’arrêtes, tu sors consulter l’application, tu appelles quelqu’un de responsable.
+          • T’expliquer clairement la tâche{"\n"}
+          • Te montrer les bons gestes{"\n"}
+          • Vérifier que tu as compris{"\n"}
+          • Te donner les EPI{"\n"}
+          • Rester disponible si tu as un doute{"\n"}
+          • Ne jamais te laisser seul sur un poste dangereux
         </Text>
       </View>
 
+      {/* Bloc ce que tu n'as pas à accepter */}
+      <Text style={styles.sectionTitle}>Ce que tu n’as PAS à accepter</Text>
+      <View style={styles.card}>
+        <Text style={styles.cardText}>
+          ✘ Travailler sans explication{"\n"}
+          ✘ Travailler seul sur un poste dangereux{"\n"}
+          ✘ Travailler en pleine chaleur sans pause{"\n"}
+          ✘ Travailler sans EPI{"\n"}
+          ✘ “Vas-y, ça ira”{"\n"}
+          ✘ “Fais comme tu peux”{"\n"}
+          ✘ “T’inquiète, on fait comme ça ici”
+        </Text>
+      </View>
+
+      {/* Bloc réponse téléphone */}
       <Text style={styles.sectionTitle}>Si quelqu’un te dit :</Text>
       <View style={styles.quoteBoxRed}>
-        <Text style={styles.quote}>« Eh le jeune, lâche ton téléphone, on est au travail ! »</Text>
+        <Text style={styles.quote}>« Eh le jeune, lâche ton téléphone ! »</Text>
       </View>
 
       <Text style={styles.sectionTitle}>Tu peux répondre :</Text>
@@ -66,109 +94,3 @@ export default function AccueilJeunesScreen() {
         </Text>
       </View>
 
-      <Text style={styles.sectionTitle}>Message pour toi</Text>
-      <View style={styles.card}>
-        <Text style={styles.cardText}>
-          Aucun travail ne mérite ta vie.{"\n"}
-          Tu as le droit de comprendre, de demander, de refuser, de sortir, de te protéger.{"\n"}
-          Tu as le droit de rentrer chez toi vivant.
-        </Text>
-      </View>
-
-      <Text style={styles.sectionTitle}>Besoin d’aide ?</Text>
-
-      <TouchableOpacity 
-        style={styles.button}
-        onPress={() => navigation.navigate("AssistantIA")}
-      >
-        <Text style={styles.buttonText}>Poser une question à l’IA</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity 
-        style={styles.buttonSecondary}
-        onPress={() => navigation.navigate("SignalerDanger")}
-      >
-        <Text style={styles.buttonSecondaryText}>Signaler un danger</Text>
-      </TouchableOpacity>
-
-    </ScrollView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: { padding: 20, backgroundColor: "#f5f5f5" },
-  title: { fontSize: 30, fontWeight: "bold", marginBottom: 5 },
-  subtitle: { fontSize: 18, color: "#555", marginBottom: 20 },
-  sectionTitle: { fontSize: 20, fontWeight: "600", marginTop: 25, marginBottom: 10 },
-
-  card: {
-    backgroundColor: "#fff",
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 15,
-    borderWidth: 1,
-    borderColor: "#ddd"
-  },
-
-  cardDanger: {
-    backgroundColor: "#ffe5e5",
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 20,
-    borderLeftWidth: 4,
-    borderLeftColor: "#d32f2f"
-  },
-
-  cardTitle: { fontSize: 18, fontWeight: "600", marginBottom: 5 },
-  cardText: { fontSize: 16, color: "#444" },
-
-  quoteBoxRed: {
-    backgroundColor: "#fff",
-    padding: 15,
-    borderRadius: 8,
-    borderLeftWidth: 4,
-    borderLeftColor: "#f44336",
-    marginBottom: 15
-  },
-
-  quoteBoxGreen: {
-    backgroundColor: "#fff",
-    padding: 15,
-    borderRadius: 8,
-    borderLeftWidth: 4,
-    borderLeftColor: "#28a745",
-    marginBottom: 15
-  },
-
-  quote: { fontSize: 16, fontStyle: "italic", color: "#555" },
-
-  button: {
-    backgroundColor: "#007bff",
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 15,
-    alignItems: "center"
-  },
-
-  buttonText: { color: "#fff", fontSize: 16, fontWeight: "600" },
-
-  buttonSecondary: {
-    backgroundColor: "#f44336",
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 40,
-    alignItems: "center"
-  },
-
-  buttonSecondaryText: { color: "#fff", fontSize: 16, fontWeight: "600" },
-
-  buttonAlert: {
-    backgroundColor: "#ff9800",
-    padding: 15,
-    borderRadius: 8,
-    marginVertical: 20,
-    alignItems: "center"
-  },
-
-  buttonAlertText: { color: "#fff", fontSize: 16, fontWeight: "700" }
-});
