@@ -4,7 +4,34 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert, ScrollView 
 export default function SignalerDangerScreen() {
   const [description, setDescription] = useState("");
 
-  const handleSend = () => {
+  const const handleSend = () => {
+  if (description.trim() === "") {
+    Alert.alert("Attention", "Merci de décrire le danger.");
+    return;
+  }
+
+  fetch("http://localhost:3000/danger", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      description,
+      date: new Date().toISOString()
+    })
+  })
+    .then(res => res.json())
+    .then(() => {
+      Alert.alert(
+        "Danger signalé",
+        "Ton signalement a été enregistré et transmis."
+      );
+      setDescription("");
+    })
+    .catch(err => {
+      console.error(err);
+      Alert.alert("Erreur", "Impossible d’enregistrer le danger.");
+    });
+};
+=> {
     if (description.trim() === "") {
       Alert.alert("Attention", "Merci de décrire le danger.");
       return;
