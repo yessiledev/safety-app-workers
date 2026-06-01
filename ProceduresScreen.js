@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function ProceduresScreen() {
   const navigation = useNavigation();
@@ -49,6 +50,7 @@ export default function ProceduresScreen() {
       >
         <Text style={styles.buttonText}>Faire la check‑list</Text>
       </TouchableOpacity>
+<EmergencyButton />
 
     </ScrollView>
   );
