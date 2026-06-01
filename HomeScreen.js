@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function HomeScreen() {
   const poste = "Manutentionnaire";
@@ -43,11 +44,17 @@ export default function HomeScreen() {
 >
   <Text style={styles.buttonText}>Choisir un autre métier</Text>
 </TouchableOpacity>
+    
 <TouchableOpacity 
   style={styles.button}
   onPress={() => navigation.navigate("DroitRetrait")}
->
-  <Text style={styles.buttonText}>Droit de retrait</Text>
+>  <Text style={styles.buttonText}>Droit de retrait</Text>
+</TouchableOpacity>
+    
+    <TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("EmergencyButton")}
+>  <Text style={styles.buttonText}>EmergencyButton</Text>
 </TouchableOpacity>
 
     </ScrollView>
