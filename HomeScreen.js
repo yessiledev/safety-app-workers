@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
   <Text style={styles.buttonText}>Faire la check‑list sécurité</Text>
 </TouchableOpacity>
 
+
 <TouchableOpacity 
   style={styles.button}
   onPress={() => navigation.navigate("FicheMetier", { metier: "manutentionnaire" })}
