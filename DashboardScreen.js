@@ -232,5 +232,12 @@ const styles = StyleSheet.create({
 >
   <Text style={styles.buttonText}>Conduite d'engins</Text>
 </TouchableOpacity>
+<TouchableOpacity 
+  style={styles.button}
+  onPress={() => navigation.navigate("TravailIsole")}
+>
+  <Text style={styles.buttonText}>Travail isolé</Text>
+</TouchableOpacity>
+
 
 });
