@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function FormationScreen() {
   const navigation = useNavigation();
@@ -60,6 +61,8 @@ export default function FormationScreen() {
             <Text style={styles.buttonText}>Valider la formation</Text>
           </TouchableOpacity>
         </View>
+<EmergencyButton />
+
       ))}
     </ScrollView>
   );
