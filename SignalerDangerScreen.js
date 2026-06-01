@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert, ScrollView } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function SignalerDangerScreen() {
   const [description, setDescription] = useState("");
@@ -68,6 +69,8 @@ export default function SignalerDangerScreen() {
       <TouchableOpacity style={styles.button} onPress={handleSend}>
         <Text style={styles.buttonText}>Envoyer le signalement</Text>
       </TouchableOpacity>
+          <EmergencyButton />
+
     </ScrollView>
   );
 }
