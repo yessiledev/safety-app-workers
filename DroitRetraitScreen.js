@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function DroitRetraitScreen() {
 
@@ -44,6 +45,7 @@ export default function DroitRetraitScreen() {
 >
   <Text style={styles.secondaryText}>Signaler un danger</Text>
 </TouchableOpacity>
+<EmergencyButton />
 
 
     </ScrollView>
