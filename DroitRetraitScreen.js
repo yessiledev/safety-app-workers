@@ -38,11 +38,13 @@ export default function DroitRetraitScreen() {
 
       <TouchableOpacity style={styles.button} onPress={handleMessage}>
         <Text style={styles.buttonText}>Message pré‑rédigé</Text>
-      </TouchableOpacity>
+      <TouchableOpacity 
+  style={styles.secondaryButton}
+  onPress={() => navigation.navigate("SignalerDanger")}
+>
+  <Text style={styles.secondaryText}>Signaler un danger</Text>
+</TouchableOpacity>
 
-      <TouchableOpacity style={styles.secondaryButton}>
-        <Text style={styles.secondaryText}>Signaler un danger</Text>
-      </TouchableOpacity>
 
     </ScrollView>
   );
