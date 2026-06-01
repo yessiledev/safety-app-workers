@@ -27,4 +27,31 @@ app.listen(port, () => {
 });
 app.get('/metiers', (req, res) => {
   res.json(Object.keys(metiersData));
+  app.post('/danger', (req, res) => {
+  const { description, date } = req.body;
+
+  if (!description) {
+    return res.status(400).json({ error: "Description manquante" });
+  }
+
+  const signalement = {
+    description,
+    date: date || new Date().toISOString()
+  };
+
+  // Charger les signalements existants
+  let data = [];
+  try {
+    data = JSON.parse(fs.readFileSync('./data/dangers.json', 'utf8'));
+  } catch (e) {}
+
+  // Ajouter le nouveau signalement
+  data.push(signalement);
+
+  // Sauvegarder
+  fs.writeFileSync('./data/dangers.json', JSON.stringify(data, null, 2));
+
+  res.json({ message: "Danger enregistré", signalement });
+});
+
 });
