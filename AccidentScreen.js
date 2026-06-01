@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function AccidentScreen() {
   const navigation = useNavigation();
@@ -62,6 +63,7 @@ export default function AccidentScreen() {
       >
         <Text style={styles.buttonSecondaryText}>Signaler un danger</Text>
       </TouchableOpacity>
+<EmergencyButton />
 
     </ScrollView>
   );
@@ -106,4 +108,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   buttonSecondaryText: { color: "#fff", fontSize: 16, fontWeight: "600" }
+
+
 });
+
