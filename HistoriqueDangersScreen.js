@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function HistoriqueDangersScreen() {
   const [dangers, setDangers] = useState([]);
@@ -42,6 +43,8 @@ export default function HistoriqueDangersScreen() {
           </Text>
           <Text style={styles.description}>{d.description}</Text>
         </View>
+  <EmergencyButton />
+
       ))}
     </ScrollView>
   );
