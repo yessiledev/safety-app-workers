@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function AmbiancesSonoresScreen() {
   const navigation = useNavigation();
@@ -84,6 +85,7 @@ export default function AmbiancesSonoresScreen() {
       >
         <Text style={styles.buttonSecondaryText}>Signaler un danger</Text>
       </TouchableOpacity>
+<EmergencyButton />
 
     </ScrollView>
   );
