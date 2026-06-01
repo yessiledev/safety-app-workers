@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Linking } from 'react-native';
+import EmergencyButton from '../components/EmergencyButton';
 
 export default function AssistantIAScreen() {
 
@@ -46,6 +47,7 @@ export default function AssistantIAScreen() {
         Prendre 30 secondes pour vérifier une consigne,  
         c’est éviter 30 jours d’arrêt de travail.
       </Text>
+<EmergencyButton />
 
     </ScrollView>
   );
