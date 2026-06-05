@@ -11,7 +11,7 @@ export default function DashboardScreen() {
   const posteDuJour = "manutentionnaire"; // plus tard : dynamique
 
   useEffect(() => {
-    fetch("http://localhost:3000/dangers")
+    fetch("http://192.168.1.15:3000/dangers")
       .then(res => res.json())
       .then(data => {
         setDangerCount(data.length);
