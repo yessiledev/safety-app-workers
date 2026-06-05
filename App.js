@@ -15,6 +15,28 @@ import ModeJeuneRecrueEtape5 from './src/screens/ModeJeuneRecrueEtape5';
 import AssistantIA from './src/screens/AssistantIA';
 import SignalerDanger from './src/screens/SignalerDanger';
 import AccueilJeunesScreen from './src/screens/AccueilJeunesScreen';
+import ChecklistScreen from './src/screens/ChecklistScreen';
+import FicheMetierScreen from './src/screens/JobScreen';
+import HistoriqueDangersScreen from './src/screens/HistoriqueDangersScreen';
+import ProceduresScreen from './src/screens/ProceduresScreen';
+import FormationScreen from './src/screens/FormationScreen';
+import ConsignesSiteScreen from './src/screens/ConsignsSiteScreen';
+import EPIScreen from './src/screens/EpiScreen';
+import AccidentScreen from './src/screens/AccidentScreen';
+import SituationsDangereusesScreen from './src/screens/SituationsDangereusesScreen';
+import CirculationScreen from './src/screens/CirculationScreen';
+import RisquesChimiquesScreen from './src/screens/RisquesChimiquesScreen';
+import RisqueIncendieScreen from './src/screens/RisqueIncendieScreen';
+import PremiersSecoursScreen from './src/screens/PremiersSecoursScreen';
+import ManutentionScreen from './src/screens/ManutentionScreen';
+import TravailHauteurScreen from './src/screens/TravailHauteurScreen';
+import AmbiancesSonoresScreen from './src/screens/AmbiancesSonoresScreen';
+import AmbiancesThermiquesScreen from './src/screens/AmbiancesThermiquesScreen';
+import ProduitsDangereuxScreen from './src/screens/ProduitsDangereuxScreen';
+import EquipementsTravailScreen from './src/screens/ÉquipementsTravailScreen';
+import ZonesInterditesScreen from './src/screens/ZonesInterditesScreen';
+import ConduiteEnginsScreen from './src/screens/ConduitEnginsScreen';
+import TravailIsoleScreen from './src/screens/TravailIsoleScreen';
 
 const Stack = createStackNavigator();
 
